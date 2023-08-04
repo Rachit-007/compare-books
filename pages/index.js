@@ -1,9 +1,9 @@
-import { BookList } from "../src/components/books/bookList";
 import { Search } from "../src/components/search/search";
 import client from "../src/graphql/client";
 import { GET_BOOKS } from "../src/graphql/query/searchBook";
 import { Pagination, Stack } from "@mui/material";
 import useHome from "../src/talons/useHome";
+import BookList from "../src/components/books/bookList";
 
 /**
  * Home component responsible for rendering the home page.

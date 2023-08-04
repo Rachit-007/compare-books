@@ -5,6 +5,9 @@ import { Header } from "../src/components/header/header";
 import client from "../src/graphql/client";
 import LoadingBar from "react-top-loading-bar";
 import "../styles/globals.css";
+import { persistedStore, wrapper } from "../src/store/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -31,19 +34,22 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ApolloProvider client={client}>
-        <Header />
-        <LoadingBar
-          color="#1E90FF"
-          height={4}
-          shadow={false}
-          ref={ref}
-          waitingTime={700}
-          containerStyle={{ marginTop: "70px" }}
-        />
-        <Component {...pageProps} />
+        <PersistGate loading={null} persistor={persistedStore}>
+          <Header />
+          <Toaster />
+          <LoadingBar
+            color="#1E90FF"
+            height={4}
+            shadow={false}
+            ref={ref}
+            waitingTime={700}
+            containerStyle={{ marginTop: "70px" }}
+          />
+          <Component {...pageProps} />
+        </PersistGate>
       </ApolloProvider>
     </>
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

@@ -10,7 +10,7 @@ export const Search = () => {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto mt-16 px-5 sticky top-2 z-40">
+      <div className="max-w-4xl mx-auto mt-16 px-5 sticky top-2 z-40 max-sm:z-0 max-sm:mt-7">
         <form onSubmit={handleSubmit(onSearch)}>
           <label
             htmlFor="default-search"

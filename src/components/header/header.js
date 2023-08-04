@@ -1,14 +1,12 @@
 import React from "react";
-import useHeader from "../../talons/useHeader";
 import Link from "next/link";
+import BookCount from "../bookCount.js/bookCount";
 
 /**
  *this component is for header
  * @returns Header which contains logo and brand name
  */
 export const Header = () => {
-  const { router } = useHeader();
-
   return (
     <header className="text-gray-600 body-font sticky top-0 z-30">
       <div className="w-full mx-auto flex  p-5 x bg-white shadow-lg justify-between items-center">
@@ -38,30 +36,29 @@ export const Header = () => {
           </svg>
           <span className="ml-3 text-xl">Books</span>
         </div>
-        {router?.query?.search && (
-          <Link href="/compare">
-            <div className="flex items-center gap-1 cursor-pointer bg-gray-200 px-3 duration-300 rounded-lg  hover:bg-gray-300">
-              <span>Compare</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007ef5"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-git-compare"
-              >
-                <circle cx="18" cy="18" r="3" />
-                <circle cx="6" cy="6" r="3" />
-                <path d="M13 6h3a2 2 0 0 1 2 2v7" />
-                <path d="M11 18H8a2 2 0 0 1-2-2V9" />
-              </svg>
-            </div>
-          </Link>
-        )}
+        <BookCount />
+        <Link href="/compare">
+          <div className="flex items-center gap-1 cursor-pointer bg-gray-200 px-3 duration-300 rounded-lg  hover:bg-gray-300">
+            <span>Compare</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#007ef5"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-git-compare"
+            >
+              <circle cx="18" cy="18" r="3" />
+              <circle cx="6" cy="6" r="3" />
+              <path d="M13 6h3a2 2 0 0 1 2 2v7" />
+              <path d="M11 18H8a2 2 0 0 1-2-2V9" />
+            </svg>
+          </div>
+        </Link>
       </div>
     </header>
   );

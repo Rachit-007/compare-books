@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
-import React from "react";
 
-const useHeader = () => {
+const useBookListToCompare = () => {
   const router = useRouter();
+
   return { router };
 };
 
-export default useHeader;
+export default useBookListToCompare;

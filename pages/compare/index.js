@@ -1,7 +1,11 @@
-import React from "react";
+import CompareBook from "../../src/components/compareBook/compareBook";
 
 const Compare = () => {
-  return <div>Compare</div>;
+  return (
+    <>
+      <CompareBook />
+    </>
+  );
 };
 
 export default Compare;
