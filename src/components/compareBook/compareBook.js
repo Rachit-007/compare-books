@@ -10,7 +10,7 @@ import BookListToCompare from "./bookListToCompare";
  * @returns the book comparison layout
  */
 const CompareBook = () => {
-  const { compareBooks, error, loading, router ,remoeAll} = useCompareBooks();
+  const { compareBooks, error, loading, router, remoeAll } = useCompareBooks();
 
   if (loading) {
     return <></>;
@@ -33,22 +33,28 @@ const CompareBook = () => {
               >
                 <span className="text-white">Back</span>
               </button>
-              <button className="h-10 w-28 items-center justify-center rounded-full bg-red-500 hover:bg-red-600 max-sm:left-3 max-sm:text-sm max-sm:h-9 max-sm:w-15 whitespace-nowrap" onClick={()=>remoeAll()}>
+              <button
+                className="h-10 w-28 items-center justify-center rounded-full bg-red-500 hover:bg-red-600 max-sm:left-3 max-sm:text-sm max-sm:h-9 max-sm:w-15 whitespace-nowrap"
+                onClick={() => remoeAll()}
+              >
                 <span className="text-white">Remove All</span>
               </button>
             </div>
             <div className="flex mt-10 whitespace-nowrap justify-center">
               <div className="px-5 text-left ">
                 <div className="h-56"></div>
-                {Title.map((title) => (
-                  <div className="mt-3 font-semibold text-md uppercase border-r-2 border-r-gray-300 pr-5 max-sm:text-sm max-sm:pr-4">
+                {Title.map((title, index) => (
+                  <div
+                    className="mt-3 font-semibold text-md uppercase border-r-2 border-r-gray-300 pr-5 max-sm:text-sm max-sm:pr-4"
+                    key={index}
+                  >
                     {title}
                   </div>
                 ))}
               </div>
               <div className="flex overflow-x-auto snap-x">
                 {compareBooks.multipleBooksById.map((book) => (
-                  <BookListToCompare book={book} />
+                  <BookListToCompare book={book} key={book.id} />
                 ))}
               </div>
             </div>

@@ -24,7 +24,6 @@ export default function Home(props) {
           <div className="max-w-4xl mx-auto mt-5">
             <Filter />
           </div>
-          <div className="max-w-4xl mx-auto mt-5">{/* <Filter /> */}</div>
           <div className="flex flex-wrap max-w-6xl mx-auto justify-center">
             {props.books.map((book) => (
               <BookList
