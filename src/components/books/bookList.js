@@ -12,7 +12,7 @@ const BookList = ({ books, id, saleInfo }) => {
 
   return (
     <>
-      <div className="relative w-72 mx-2 my-7 max-h-100 p-3 overflow-hidden flex-col justify-between items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="relative w-72 mx-2 my-7 max-h-100 p-3 overflow-hidden flex-col justify-between items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
         <div
           className={`absolute top-10 right-10 w-full text-center shadow-black shadow-md h-8 text-sm flex items-center justify-center transform rotate-45  -translate-y-1/2 translate-x-1/2 text-white font-bold whitespace-nowrap ${
             sale === "FOR SALE" ? `bg-green-500` : `bg-red-600`

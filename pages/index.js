@@ -4,6 +4,7 @@ import { GET_BOOKS } from "../src/graphql/query/searchBook";
 import { Pagination, Stack } from "@mui/material";
 import useHome from "../src/talons/useHome";
 import BookList from "../src/components/books/bookList";
+import { Filter } from "../src/components/filter/filter";
 
 /**
  * Home component responsible for rendering the home page.
@@ -20,6 +21,9 @@ export default function Home(props) {
       <Search />
       {props.books ? (
         <>
+          <div className="max-w-4xl mx-auto mt-5">
+            <Filter />
+          </div>
           <div className="max-w-4xl mx-auto mt-5">{/* <Filter /> */}</div>
           <div className="flex flex-wrap max-w-6xl mx-auto justify-center">
             {props.books.map((book) => (

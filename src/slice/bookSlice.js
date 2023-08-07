@@ -20,10 +20,14 @@ export const bookSlice = createSlice({
     removeCompareBooks: (state, action) => {
       state.books = state.books.filter((book) => book !== action.payload);
     },
+    removeAllCompareBooks: (state, action) => {
+      state.books = [];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { compareBooks, removeCompareBooks } = bookSlice.actions;
+export const { compareBooks, removeCompareBooks, removeAllCompareBooks } =
+  bookSlice.actions;
 
 export default bookSlice.reducer;

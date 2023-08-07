@@ -13,13 +13,12 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const ref = useRef(null);
 
+  //This useEffect is responsible for showing the loading bar
   useEffect(() => {
     const start = () => {
-      console.log("start");
       ref.current.continuousStart();
     };
     const end = () => {
-      console.log("finished");
       ref.current.complete();
     };
     router.events.on("routeChangeStart", start);
@@ -31,6 +30,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeError", end);
     };
   }, []);
+
   return (
     <>
       <ApolloProvider client={client}>

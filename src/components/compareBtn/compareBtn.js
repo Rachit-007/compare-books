@@ -1,7 +1,13 @@
 import { includes } from "lodash";
 import React from "react";
 import useCompareBtn from "../../hooks/useCompareBtn";
+import PropTypes from "prop-types";
 
+/**
+ *if the book is already present in the list you see the remove button and if not you see the add button
+ * @param {String} param0
+ * @returns the button to add or remove the book from comparison list
+ */
 const CompareBtn = ({ bookId }) => {
   const { books, addBooksToCompare, removeBooksFromCompare } = useCompareBtn();
   return (
@@ -51,6 +57,10 @@ const CompareBtn = ({ bookId }) => {
       )}
     </>
   );
+};
+
+CompareBtn.propTypes = {
+  bookId: PropTypes.string.isRequired,
 };
 
 export default CompareBtn;

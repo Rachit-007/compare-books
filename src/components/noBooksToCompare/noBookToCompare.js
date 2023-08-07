@@ -1,5 +1,9 @@
 import useNoBookToCompare from "../../hooks/useNoBookToCompare";
 
+/**
+ * if there are no books to compare this component will call
+ * @returns the component which shows that no books to compare
+ */
 const NoBookToCompare = () => {
   const { router } = useNoBookToCompare();
 
