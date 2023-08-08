@@ -5,6 +5,7 @@ import { Pagination, Stack } from "@mui/material";
 import useHome from "../src/talons/useHome";
 import BookList from "../src/components/books/bookList";
 import { Filter } from "../src/components/filter/filter";
+import Head from "next/head";
 
 /**
  * Home component responsible for rendering the home page.
@@ -19,6 +20,13 @@ export default function Home(props) {
   console.log(props);
   return (
     <>
+      <Head>
+        <title>Home Page - GoogleBooks</title>
+        <meta
+          name="description"
+          content="Browse a wide selection of books at Your Bookstore. Find your favorite books and discover new ones."
+        />
+      </Head>
       <Search />
       {props.books ? (
         <>
