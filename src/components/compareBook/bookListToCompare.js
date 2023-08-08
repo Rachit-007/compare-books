@@ -19,6 +19,8 @@ const BookListToCompare = ({ book }) => {
                 : "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-image-vector-illustration-isolated-png-image_4979075.jpg"
             }
             height={150}
+            priority={true}
+            alt="book image"
             width={100}
           />
         </div>

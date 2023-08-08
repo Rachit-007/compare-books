@@ -28,13 +28,17 @@ const BookList = ({ books, id, saleInfo }) => {
               src={books.imageLinks.thumbnail}
               height={200}
               width={150}
+              priority={true}
+              alt="book image"
             />
           ) : (
             <Image
               className="rounded-t-lg h-72 items-center"
               src="https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-image-vector-illustration-isolated-png-image_4979075.jpg"
               height={200}
+              priority={true}
               width={100}
+              alt="book image"
             />
           )}
         </div>
