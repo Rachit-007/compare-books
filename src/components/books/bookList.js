@@ -16,7 +16,7 @@ const BookList = ({ books, id, saleInfo }) => {
       <div className="relative w-72 mx-2 my-7 max-h-100 p-3 overflow-hidden flex-col justify-between items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
         <div
           className={`absolute top-10 right-10 w-full text-center shadow-black shadow-md h-8 text-sm flex items-center justify-center transform rotate-45  -translate-y-1/2 translate-x-1/2 text-white font-bold whitespace-nowrap z-10 ${
-            sale === "FOR SALE" ? `bg-green-500` : `bg-red-600`
+            sale === "FOR SALE" ? `bg-green-700` : `bg-red-700`
           }`}
         >
           <span>{sale}</span>
@@ -43,10 +43,10 @@ const BookList = ({ books, id, saleInfo }) => {
           )}
         </div>
         <div className="p-5 flex-1 h-100">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-16 overflow-hidden text-ellipsis">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 h-16 overflow-hidden text-ellipsis">
             {books.title}
           </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[70px] overflow-hidden">
+          <p className="mb-3 font-normal text-gray-700 h-[70px] overflow-hidden">
             {books.description}...
           </p>
         </div>
@@ -55,7 +55,7 @@ const BookList = ({ books, id, saleInfo }) => {
           {sale === "FOR SALE" ? (
             <a href={saleInfo.buyLink} target="_blank">
               <div className="flex items-center">
-                <span className="text-sm text-gray-400 font-bold">
+                <span className="text-sm text-gray-800 font-bold">
                   GET IT ON
                 </span>
                 <svg
