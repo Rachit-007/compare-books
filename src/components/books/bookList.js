@@ -26,8 +26,8 @@ const BookList = ({ books, id, saleInfo }) => {
             <Image
               className="rounded-t-lg h-72"
               src={books.imageLinks.thumbnail}
-              height={200}
-              width={150}
+              height={150}
+              width={100}
               priority={true}
               alt="book image"
             />
