@@ -17,8 +17,8 @@ const CompareBook = () => {
   }
 
   if (error) {
-    toast.error("There was some error.Please try again Later...");
     router.back();
+    toast.error("There was some error.Please try again Later...");
   }
 
   return (

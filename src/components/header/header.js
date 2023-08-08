@@ -1,6 +1,5 @@
-import React from "react";
 import Link from "next/link";
-import BookCount from "../bookCount.js/bookCount";
+import BookCount from "../bookCount/bookCount";
 
 /**
  *this component is for header

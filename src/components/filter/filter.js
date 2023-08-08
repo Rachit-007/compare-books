@@ -1,11 +1,10 @@
-import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import useFilter from "../../hooks/useFilter";
 
 /**
- *This function is responsible for getting the filter menu and 
+ *This function is responsible for getting the filter menu and
  * @returns filter dropdown
  */
 export function Filter() {

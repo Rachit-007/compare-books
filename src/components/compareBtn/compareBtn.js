@@ -1,5 +1,4 @@
 import { includes } from "lodash";
-import React from "react";
 import useCompareBtn from "../../hooks/useCompareBtn";
 import PropTypes from "prop-types";
 

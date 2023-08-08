@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PropTypes from "prop-types";
 import { memo } from "react";
 import CompareBtn from "../compareBtn/compareBtn";
@@ -14,7 +15,7 @@ const BookList = ({ books, id, saleInfo }) => {
     <>
       <div className="relative w-72 mx-2 my-7 max-h-100 p-3 overflow-hidden flex-col justify-between items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
         <div
-          className={`absolute top-10 right-10 w-full text-center shadow-black shadow-md h-8 text-sm flex items-center justify-center transform rotate-45  -translate-y-1/2 translate-x-1/2 text-white font-bold whitespace-nowrap ${
+          className={`absolute top-10 right-10 w-full text-center shadow-black shadow-md h-8 text-sm flex items-center justify-center transform rotate-45  -translate-y-1/2 translate-x-1/2 text-white font-bold whitespace-nowrap z-10 ${
             sale === "FOR SALE" ? `bg-green-500` : `bg-red-600`
           }`}
         >
@@ -22,14 +23,18 @@ const BookList = ({ books, id, saleInfo }) => {
         </div>
         <div className="mx-auto flex justify-center">
           {books.imageLinks ? (
-            <img
-              className="rounded-t-lg h-72 "
+            <Image
+              className="rounded-t-lg h-72"
               src={books.imageLinks.thumbnail}
+              height={200}
+              width={150}
             />
           ) : (
-            <img
+            <Image
               className="rounded-t-lg h-72 items-center"
               src="https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-image-vector-illustration-isolated-png-image_4979075.jpg"
+              height={200}
+              width={100}
             />
           )}
         </div>

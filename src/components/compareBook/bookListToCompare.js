@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PropTypes from "prop-types";
 import { Rating } from "react-simple-star-rating";
 
@@ -11,12 +12,14 @@ const BookListToCompare = ({ book }) => {
     <>
       <div className=" px-5 flex justify-center flex-col items-center w-56 snap-start mt-2 max-sm:text-xs text-sm">
         <div className="w-full flex justify-center h-52 mt-1">
-          <img
+          <Image
             src={
               book.volumeInfo.imageLinks
                 ? book.volumeInfo.imageLinks.thumbnail
                 : "https://png.pngtree.com/png-clipart/20190925/original/pngtree-no-image-vector-illustration-isolated-png-image_4979075.jpg"
             }
+            height={150}
+            width={100}
           />
         </div>
         <div className="mt-4 font-semibold w-full uppercase text-ellipsis overflow-hidden whitespace-nowrap">
