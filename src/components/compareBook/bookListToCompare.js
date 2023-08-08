@@ -22,6 +22,7 @@ const BookListToCompare = ({ book }) => {
             priority={true}
             alt="book image"
             width={100}
+            className="object-contain w-full h-full"
           />
         </div>
         <div className="mt-4 font-semibold w-full uppercase text-ellipsis overflow-hidden whitespace-nowrap">
