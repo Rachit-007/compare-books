@@ -16,6 +16,7 @@ import { Filter } from "../src/components/filter/filter";
 export default function Home(props) {
   const { handleChange, router } = useHome();
 
+  console.log(props);
   return (
     <>
       <Search />

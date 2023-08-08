@@ -30,8 +30,11 @@ const NoBookToCompare = () => {
         <div>
           <h1 className="mt-7 text-3xl font-bold">No Books to Compare</h1>
         </div>
-        <div className="mt-10 px-10 bg-blue-500 text-white py-3 rounded-lg cursor-pointer hover:bg-blue-600">
-          <button onClick={() => router.back()}>Continue Search</button>
+        <div
+          className="mt-10 px-10 bg-blue-500 text-white py-3 rounded-lg cursor-pointer hover:bg-blue-600"
+          onClick={() => router.back()}
+        >
+          <button>Continue Search</button>
         </div>
       </div>
     </>
